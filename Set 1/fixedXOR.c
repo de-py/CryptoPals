@@ -45,5 +45,6 @@ int main(){
 
     char *result = fixedXOR(str_a,str_b, len_str);
     printf("%s\n", result);
+    free(result);
     return 0;
 }
