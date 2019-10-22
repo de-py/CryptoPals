@@ -85,5 +85,7 @@ int main(){
    
     char *x = base64_encode(raw_string, b64_alphabet);
     printf("%s\n", x);
+    free(x);
     return 0;
+
 }
