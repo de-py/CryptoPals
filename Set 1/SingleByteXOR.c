@@ -103,6 +103,7 @@ struct Tuple rank_xor(const char *input_string, int len_str){
         i++;
 
     }
+    free(test_case);
     winners.byte_val = high_byte;
     winners.result_val = high_case;
     return winners;
@@ -112,11 +113,11 @@ struct Tuple rank_xor(const char *input_string, int len_str){
 int main(){
     const char single_xor[] = "\x1b\x37\x37\x33\x31\x36\x3f\x78\x15\x1b\x7f\x2b\x78\x34\x31\x33\x3d\x78\x39\x78\x28\x37\x2d\x36\x3c\x78\x37\x3e\x78\x3a\x39\x3b\x37\x36";
     int str_len = sizeof(single_xor);
-    char *result = (char*) malloc(str_len);
     struct Tuple winners;
     winners = rank_xor(single_xor, str_len);
     printf("Winning String:\n%s\n\n", winners.result_val);
     printf("Winning Byte: %c\n", winners.byte_val);
+    free(winners.result_val);
 
     return 0;
 }
