@@ -53,11 +53,12 @@ char *single_byte_xor(const char *input_string, char xor_byte, int len_str){
 int letter_score(int letter){
 
     switch(tolower(letter)){
-        case 'e': return 12;
-        case 't': return 11;
-        case 'a': return 10;
-        case 'o': return 9;
-        case 'i': return 8;
+        case 'e': return 13;
+        case 't': return 12;
+        case 'a': return 11;
+        case 'o': return 10;
+        case 'i': return 9;
+        case ' ': return 8;
         case 'n': return 7;
         case 's': return 6;
         case 'h': return 5;
@@ -65,7 +66,7 @@ int letter_score(int letter){
         case 'd': return 3;
         case 'l': return 2;
         case 'u': return 1;
-        defaut: return 0;
+        default: return 0;
     }
     return 0;
 }
